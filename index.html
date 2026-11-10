@@ -1,118 +1,295 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff0f5">
-  <title>For Maryam ♡</title>
-  <style>
-    :root{--pink:#d96b91;--deep:#8e3d61;--ink:#593d4a;--paper:#fff9fb;--rose:#ffe3ed}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(circle at 10% 5%,#ffe0eb 0,transparent 28rem),linear-gradient(135deg,#fff8fb,#fff0f5);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
-    .top{position:fixed;z-index:5;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:13px 5%;background:#fff9f1d9;backdrop-filter:blur(12px);border-bottom:1px solid #f4d6e1}
-    .brand{font-size:18px;color:var(--deep);letter-spacing:.04em}.music{border:1px solid #e7aec3;background:#fff;border-radius:30px;padding:9px 14px;color:var(--deep);cursor:pointer;font:14px Arial}
-    main{max-width:920px;margin:auto;padding:90px 20px 50px}
-    .hero{text-align:center;min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
-    .eyebrow{letter-spacing:.22em;text-transform:uppercase;font:11px Arial;color:#b66a88}
-    h1{font-size:clamp(52px,11vw,100px);font-weight:normal;line-height:.95;margin:20px 0;color:var(--deep)}
-    .heart{font-size:30px;color:var(--pink);margin:12px}
-    .subtitle{font-style:italic;font-size:clamp(18px,4vw,24px);max-width:560px;line-height:1.6}
-    .scroll{margin-top:35px;color:#b66a88;font:12px Arial;letter-spacing:.15em}
-    section{padding:65px 0;scroll-margin-top:70px}
-    .section-kicker{text-transform:uppercase;letter-spacing:.2em;font:11px Arial;color:#b66a88;text-align:center}
-    h2{text-align:center;font-weight:normal;font-size:clamp(30px,6vw,46px);color:var(--deep);margin:12px 0 28px}
-    .card{background:#ffffffc9;border:1px solid #f2d4e0;border-radius:22px;padding:clamp(22px,5vw,40px);box-shadow:0 12px 40px #a44c6b0d;line-height:1.85;font-size:18px}
-    .center{text-align:center}
-    .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .photo{background:#fff;border:1px solid #f1d2de;border-radius:17px;padding:10px;box-shadow:0 8px 22px #9a536511;transform:rotate(-1deg)}
-    .photo:nth-child(2n){transform:rotate(1.3deg)}
-    .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:#ffeaf1;display:block}
-    .photo figcaption{text-align:center;padding:11px 4px 5px;font-style:italic;color:#98617a}
-    .note{font-size:13px;color:#a06c82;text-align:center;margin-top:16px;font-family:Arial}
-    .reasons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .reason{padding:18px;border-radius:16px;background:#fff;border:1px solid #f3d9e3;font-size:17px;line-height:1.5}
-    .reason span{display:block;color:var(--pink);font-size:22px;margin-bottom:7px}
-    .letter{font-size:19px;line-height:1.95}
-    .signature{text-align:right;color:var(--deep);font-style:italic;margin-top:25px}
-    footer{text-align:center;padding:35px 10px;color:#ad7890;font-style:italic}
-    .divider{text-align:center;color:#dc8ba8;letter-spacing:.6em;margin:25px}
-    @media(max-width:600px){.gallery,.reasons{grid-template-columns:1fr}.hero{min-height:75vh}.photo{max-width:420px;margin:auto;width:100%}.top{padding:12px 4%}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Maryam ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #190711, #48152c, #210817);
+    color: #fff0f4;
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 85px 20px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: clamp(42px, 9vw, 75px);
+    color: #ffb6cb;
+    text-shadow: 0 0 25px #ff477e;
+    margin: 20px;
+}
+
+h2 {
+    color: #ff9fba;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+p {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: 19px;
+    line-height: 1.9;
+    color: #ffe3ec;
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.2); }
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff477e;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff477e;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+.letter {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,182,203,0.3);
+    border-radius: 25px;
+    padding: 35px;
+    max-width: 850px;
+    margin: auto;
+    box-shadow: 0 0 35px rgba(255,71,126,0.12);
+}
+
+.gallery {
+    max-width: 1000px;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid #ff9fba;
+    box-shadow: 0 5px 25px #0005;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+.caption {
+    font-size: 15px;
+    color: #ffb6cb;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 55px 20px;
+    color: #ffb6cb;
+}
+
+#surprise {
+    display: none;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 650px;
+    font-size: 21px;
+    line-height: 1.8;
+    color: #ffd6e2;
+}
+
+.float {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: rise 8s linear forwards;
+    z-index: 5;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+</style>
 </head>
+
 <body>
-  <header class="top">
-    <div class="brand">a little something ♡</div>
-  </header>
-  <main>
-    <div class="hero">
-      <div class="eyebrow">made with a little extra love</div>
-      <div class="heart">♡</div>
-      <h1>For<br>Maryam</h1>
-      <p class="subtitle">Some people make the world feel softer just by being in it. You're one of them.</p>
-      <div class="scroll">SCROLL A LITTLE ↓</div>
+
+<section class="hero">
+    <div class="heart">❤️</div>
+    <h1>For Maryam</h1>
+    <p>A little place on the internet, made for someone who means more than words can explain.</p>
+    <button onclick="document.getElementById('letter').scrollIntoView()">
+        Open your little surprise 💌
+    </button>
+</section>
+
+<section id="letter">
+    <h2>Why You're So Important To Me</h2>
+
+    <div class="letter">
+        <p>
+            Maryam, I honestly don't know where to begin.
+            Sometimes I wish words were enough to explain what
+            someone means to you, but somehow they never are.
+        </p>
+
+        <p>
+            You became someone whose presence makes my ordinary
+            days feel special. It's not just the conversations,
+            the calls, or the time we spend together.
+            It's the little things you do without even realising
+            how much they mean to me.
+        </p>
+
+        <p>
+            The way you ask whether I've eaten, whether I've
+            had enough water, and whether I'm taking care of
+            myself. You might consider those tiny questions,
+            but I remember them. I remember how they make me feel
+            cared for.
+        </p>
+
+        <p>
+            And your eyes... I genuinely don't know what it is
+            about them. Whenever I look at them, everything
+            around me seems to disappear for a moment.
+            They have a beauty I could never properly describe.
+        </p>
+
+        <p>
+            I admire your kindness, your patience, and the way
+            you try to understand me. Even on difficult days,
+            you make me feel like my presence matters.
+        </p>
+
+        <p>
+            I don't want this page to be just another romantic
+            website. I want it to remind you that someone notices
+            the little things about you, appreciates them,
+            and is genuinely grateful that you exist.
+        </p>
+
+        <p>
+            You are important to me, Maryam. More than this
+            little page could ever explain. ❤️
+        </p>
     </div>
+</section>
 
-    <section id="hello">
-      <div class="section-kicker">01 · a small introduction</div>
-      <h2>Dear Maryam,</h2>
-      <div class="card center">
-        I made this little corner of the internet just for you. Not because I could fit everything I want to say on one page, but because I wanted you to have something you can come back to whenever you need a reminder that you are appreciated.
-        <div class="divider">✧ ♡ ✧</div>
-        This isn't about grand gestures. It's about the little things you do that stay with me.
-      </div>
-    </section>
+<section>
+    <h2>A Little Gallery Of You 📸</h2>
+    <p>Some moments deserve to be kept a little closer.</p>
 
-    <section id="memories">
-      <div class="section-kicker">02 · little snapshots</div>
-      <h2>Moments worth keeping</h2>
-      <div class="gallery">
-        <figure class="photo"><img src="assets/maryam-1.jpg" alt="A favourite picture of Maryam"><figcaption>your smile, my favourite view ♡</figcaption></figure>
-        <figure class="photo"><img src="assets/maryam-2.jpg" alt="Another favourite picture"><figcaption>a moment I want to remember</figcaption></figure>
-        <figure class="photo"><img src="assets/maryam-3.jpg" alt="A memory together"><figcaption>little things, big memories</figcaption></figure>
-        <figure class="photo"><img src="assets/maryam-4.jpg" alt="A favourite memory"><figcaption>one for the memory book</figcaption></figure>
-      </div>
-      <p class="note">Replace these four sample image files in the assets folder with pictures you have permission to share.</p>
-    </section>
+    <div class="gallery">
+        <div>
+            <img src="assets/maryam-1.jpg" alt="Maryam memory 1">
+            <div class="caption">A beautiful moment ❤️</div>
+        </div>
 
-    <section id="feelings">
-      <div class="section-kicker">03 · how you make me feel</div>
-      <h2>You make ordinary days brighter</h2>
-      <div class="card">
-        There's something about your eyes that makes me forget what I was about to say. But it's not just that. It's the way you ask if I've eaten, whether I've had water, and how I'm doing. Those little questions make me feel cared for in a way that's hard to explain.
+        <div>
+            <img src="assets/maryam-2.jpg" alt="Maryam memory 2">
+            <div class="caption">That beautiful smile 🌷</div>
+        </div>
+
+        <div>
+            <img src="assets/maryam-3.jpg" alt="Maryam memory 3">
+            <div class="caption">A moment worth remembering</div>
+        </div>
+
+        <div>
+            <img src="assets/maryam-4.jpg" alt="Maryam memory 4">
+            <div class="caption">Simply you. ❤️</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>One Last Thing...</h2>
+    <p>
+        If I could make one wish, it would be that you always
+        see yourself with the same kindness and admiration
+        that I see in you.
+    </p>
+
+    <button onclick="document.getElementById('surprise').style.display='block';">
+        There's one more thing... 💗
+    </button>
+
+    <div id="surprise">
+        Maryam, thank you for being you.
+        Thank you for the little questions, the conversations,
+        the laughter, and the moments that I keep close to my heart.
+
         <br><br>
-        I love that you try to understand me, even when life is busy. And when we get to talk for hours, time seems to move differently. You remind me that kindness can be quiet, simple, and still mean so much.
-      </div>
-    </section>
 
-    <section id="appreciation">
-      <div class="section-kicker">04 · things I appreciate</div>
-      <h2>All the little things</h2>
-      <div class="reasons">
-        <div class="reason"><span>♡</span>The way you check whether I've eaten and had water.</div>
-        <div class="reason"><span>✿</span>How you make an effort to understand me.</div>
-        <div class="reason"><span>☾</span>The time you spend talking with me, even on busy days.</div>
-        <div class="reason"><span>✧</span>How your kindness makes difficult days feel lighter.</div>
-        <div class="reason"><span>♡</span>The way you make me feel encouraged and appreciated.</div>
-        <div class="reason"><span>❀</span>Simply being yourself. That is already special.</div>
-      </div>
-    </section>
+        I hope life gives you a thousand reasons to smile.
 
-    <section id="letter">
-      <div class="section-kicker">05 · one last thing</div>
-      <h2>A little letter for you</h2>
-      <div class="card letter">
-        Maryam,
         <br><br>
-        I hope you never underestimate how lovely your heart is. You deserve the same patience, care, and kindness that you so naturally give to others. I notice the little things, and I appreciate them more than I probably say.
-        <br><br>
-        Thank you for the conversations, the laughter, the check-ins, and for being someone whose presence can make a day feel better. I don't want this page to make you feel pressured to say or do anything. I just wanted to celebrate you and let you know that you matter.
-        <br><br>
-        Keep being you. The world needs more of your kind of softness.
-        <div class="signature">With appreciation, always ♡</div>
-      </div>
-    </section>
-    <footer>made for you, Maryam · with care ♡</footer>
-  </main>
+
+        You deserve so much happiness. ❤️
+    </div>
+</section>
+
+<footer>
+    Made with love, just for Maryam.
+    <div style="font-size:30px;margin-top:15px;">❤️ 🌷 ❤️</div>
+</footer>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "float";
+    heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🌸";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+}
+
+setInterval(createHeart, 900);
+</script>
 
 </body>
 </html>
