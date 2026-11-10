@@ -5,9 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Maryam ❤️</title>
-
 <meta name="theme-color" content="#210817">
-<meta name="description" content="A little corner of the internet made especially for Maryam.">
 
 <style>
 * {
@@ -99,6 +97,8 @@ button:hover {
     box-shadow: 0 0 35px rgba(255,71,126,0.12);
 }
 
+/* PHOTO GALLERY */
+
 .gallery {
     max-width: 1000px;
     margin: 35px auto;
@@ -107,14 +107,20 @@ button:hover {
     gap: 18px;
 }
 
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+}
+
 .gallery img {
+    display: block;
     width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 18px;
     border: 2px solid #ff9fba;
     box-shadow: 0 5px 25px #0005;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .gallery img:hover {
@@ -189,6 +195,7 @@ footer {
 <!-- OPENING -->
 
 <section class="hero">
+
     <div class="heart">❤️</div>
 
     <h1>For Maryam</h1>
@@ -202,6 +209,7 @@ footer {
     <button onclick="document.getElementById('letter').scrollIntoView()">
         Open your little surprise 💌
     </button>
+
 </section>
 
 
@@ -261,42 +269,58 @@ footer {
         </p>
 
     </div>
+
 </section>
 
 
 <!-- PHOTO GALLERY -->
 
-<section>
+<section id="gallery">
 
     <h2>A Little Gallery Of You 📸</h2>
 
-    <p>
-        Some moments deserve to be kept a little closer.
-    </p>
+    <p>Some moments deserve to be kept a little closer.</p>
 
     <div class="gallery">
 
-        <div>
-            <img src="assets/maryam-1.jpeg" alt="Maryam memory 1">
+        <div class="gallery-item">
+            <img
+                src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-1.jpeg"
+                alt="Maryam memory 1"
+                loading="eager"
+            >
             <div class="caption">A beautiful moment ❤️</div>
         </div>
 
-        <div>
-            <img src="assets/maryam-2.jpeg" alt="Maryam memory 2">
+        <div class="gallery-item">
+            <img
+                src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-2.jpeg"
+                alt="Maryam memory 2"
+                loading="eager"
+            >
             <div class="caption">That beautiful smile 🌷</div>
         </div>
 
-        <div>
-            <img src="assets/maryam-3.jpeg" alt="Maryam memory 3">
+        <div class="gallery-item">
+            <img
+                src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-3.jpeg"
+                alt="Maryam memory 3"
+                loading="eager"
+            >
             <div class="caption">A moment worth remembering</div>
         </div>
 
-        <div>
-            <img src="assets/maryam-4.jpeg" alt="Maryam memory 4">
+        <div class="gallery-item">
+            <img
+                src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-4.jpeg"
+                alt="Maryam memory 4"
+                loading="eager"
+            >
             <div class="caption">Simply you ❤️</div>
         </div>
 
     </div>
+
 </section>
 
 
