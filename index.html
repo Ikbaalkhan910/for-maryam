@@ -1,33 +1,119 @@
-<!-- PHOTO GALLERY -->
+/* MOBILE RESPONSIVE DESIGN */
 
-<section id="gallery">
+@media (max-width: 600px) {
 
-    <h2>A Little Gallery Of You 📸</h2>
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 
-    <p>Some moments deserve to be kept a little closer.</p>
+    section {
+        padding: 65px 16px;
+    }
 
-    <div class="gallery">
+    .hero {
+        min-height: 100svh;
+        padding: 30px 20px;
+    }
 
-        <div class="gallery-item">
-            <img data-image="maryam-1" alt="Maryam memory 1">
-            <div class="caption">A beautiful moment ❤️</div>
-        </div>
+    h1 {
+        font-size: clamp(42px, 12vw, 60px);
+        margin: 15px 0;
+    }
 
-        <div class="gallery-item">
-            <img data-image="maryam-2" alt="Maryam memory 2">
-            <div class="caption">That beautiful smile 🌷</div>
-        </div>
+    h2 {
+        font-size: 26px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
 
-        <div class="gallery-item">
-            <img data-image="maryam-3" alt="Maryam memory 3">
-            <div class="caption">A moment worth remembering</div>
-        </div>
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        padding: 0 5px;
+    }
 
-        <div class="gallery-item">
-            <img data-image="maryam-4" alt="Maryam memory 4">
-            <div class="caption">Simply you ❤️</div>
-        </div>
+    .heart {
+        font-size: 55px;
+    }
 
-    </div>
+    button {
+        font-size: 15px;
+        padding: 14px 23px;
+        max-width: 100%;
+    }
 
-</section>
+    .letter {
+        padding: 22px 17px;
+        border-radius: 20px;
+    }
+
+    .letter p {
+        font-size: 16px;
+        line-height: 1.85;
+        text-align: left;
+        padding: 0;
+    }
+
+    /* MOBILE PHOTO GALLERY */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+        margin: 25px auto;
+    }
+
+    .gallery-item {
+        min-width: 0;
+        border-radius: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .caption {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 8px;
+    }
+
+    #surprise {
+        font-size: 17px;
+        padding: 22px 16px;
+        line-height: 1.8;
+    }
+
+    footer {
+        padding: 40px 15px;
+        font-size: 14px;
+    }
+
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 360px) {
+
+    .gallery {
+        gap: 9px;
+    }
+
+    .gallery img {
+        height: 185px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+}
