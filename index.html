@@ -6,11 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Maryam ❤️</title>
 
+<meta name="theme-color" content="#210817">
+<meta name="description" content="A little corner of the internet made especially for Maryam.">
+
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -60,7 +67,9 @@ p {
 }
 
 @keyframes beat {
-    50% { transform: scale(1.2); }
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 button {
@@ -73,6 +82,7 @@ button {
     font-size: 17px;
     cursor: pointer;
     box-shadow: 0 0 20px #ff477e;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -130,6 +140,8 @@ footer {
     font-size: 21px;
     line-height: 1.8;
     color: #ffd6e2;
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
 }
 
 .float {
@@ -147,31 +159,64 @@ footer {
     }
 }
 
-html {
-    scroll-behavior: smooth;
+@media(max-width: 600px) {
+    .letter {
+        padding: 22px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery img {
+        height: 220px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- OPENING -->
+
 <section class="hero">
     <div class="heart">❤️</div>
+
     <h1>For Maryam</h1>
-    <p>A little place on the internet, made for someone who means more than words can explain.</p>
+
+    <p>
+        A little place on the internet,
+        made for someone who means more
+        than words can explain.
+    </p>
+
     <button onclick="document.getElementById('letter').scrollIntoView()">
         Open your little surprise 💌
     </button>
 </section>
 
+
+<!-- LOVE LETTER -->
+
 <section id="letter">
+
     <h2>Why You're So Important To Me</h2>
 
     <div class="letter">
+
         <p>
             Maryam, I honestly don't know where to begin.
-            Sometimes I wish words were enough to explain what
-            someone means to you, but somehow they never are.
+            Sometimes I wish words were enough to explain
+            what someone means to you, but somehow they never are.
         </p>
 
         <p>
@@ -211,53 +256,70 @@ html {
         </p>
 
         <p>
-            You are important to me, Maryam. More than this
-            little page could ever explain. ❤️
+            You are important to me, Maryam.
+            More than this little page could ever explain. ❤️
         </p>
+
     </div>
 </section>
 
+
+<!-- PHOTO GALLERY -->
+
 <section>
+
     <h2>A Little Gallery Of You 📸</h2>
-    <p>Some moments deserve to be kept a little closer.</p>
+
+    <p>
+        Some moments deserve to be kept a little closer.
+    </p>
 
     <div class="gallery">
+
         <div>
-            <img src="assets/maryam-1.jpg" alt="Maryam memory 1">
+            <img src="assets/maryam-1.jpeg" alt="Maryam memory 1">
             <div class="caption">A beautiful moment ❤️</div>
         </div>
 
         <div>
-            <img src="assets/maryam-2.jpg" alt="Maryam memory 2">
+            <img src="assets/maryam-2.jpeg" alt="Maryam memory 2">
             <div class="caption">That beautiful smile 🌷</div>
         </div>
 
         <div>
-            <img src="assets/maryam-3.jpg" alt="Maryam memory 3">
+            <img src="assets/maryam-3.jpeg" alt="Maryam memory 3">
             <div class="caption">A moment worth remembering</div>
         </div>
 
         <div>
-            <img src="assets/maryam-4.jpg" alt="Maryam memory 4">
-            <div class="caption">Simply you. ❤️</div>
+            <img src="assets/maryam-4.jpeg" alt="Maryam memory 4">
+            <div class="caption">Simply you ❤️</div>
         </div>
+
     </div>
 </section>
 
+
+<!-- FINAL MESSAGE -->
+
 <section>
+
     <h2>One Last Thing...</h2>
+
     <p>
         If I could make one wish, it would be that you always
         see yourself with the same kindness and admiration
         that I see in you.
     </p>
 
-    <button onclick="document.getElementById('surprise').style.display='block';">
+    <button onclick="document.getElementById('surprise').style.display='block'">
         There's one more thing... 💗
     </button>
 
     <div id="surprise">
+
         Maryam, thank you for being you.
+
         Thank you for the little questions, the conversations,
         the laughter, and the moments that I keep close to my heart.
 
@@ -267,28 +329,56 @@ html {
 
         <br><br>
 
-        You deserve so much happiness. ❤️
+        You deserve so much happiness.
+
+        <br><br>
+
+        ❤️ Forever wishing the best for you.
+
     </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
+
     Made with love, just for Maryam.
-    <div style="font-size:30px;margin-top:15px;">❤️ 🌷 ❤️</div>
+
+    <div style="font-size:30px;margin-top:15px;">
+        ❤️ 🌷 ❤️
+    </div>
+
 </footer>
 
+
+<!-- FLOATING HEARTS -->
+
 <script>
+
 function createHeart() {
+
     const heart = document.createElement("div");
+
     heart.className = "float";
-    heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🌸";
+
+    heart.innerHTML =
+        Math.random() > 0.5 ? "❤️" : "🌸";
+
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
     document.body.appendChild(heart);
 
     setTimeout(() => heart.remove(), 8000);
+
 }
 
 setInterval(createHeart, 900);
+
 </script>
 
 </body>
