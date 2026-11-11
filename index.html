@@ -4,8 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#210817">
-<title>One Question For Maryam ❤️</title>
+<title>My Princess Maryam 🌙</title>
 
 <style>
 * {
@@ -16,320 +15,277 @@
 
 body {
     min-height: 100vh;
-    min-height: 100svh;
-    background: linear-gradient(135deg,#190711,#48152c,#210817);
-    color: #fff0f4;
-    font-family: Georgia,serif;
-    text-align: center;
+    font-family: Georgia, serif;
+    color: #fff5e6;
+    background:
+        radial-gradient(circle at top, #65417d 0%, transparent 40%),
+        linear-gradient(145deg, #100d2b, #28153f, #4b2148);
     overflow-x: hidden;
-    padding: 25px 15px;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white 50%, transparent),
+        radial-gradient(2px 2px at 70% 20%, #ffe6a6 50%, transparent),
+        radial-gradient(2px 2px at 40% 80%, white 50%, transparent),
+        radial-gradient(2px 2px at 85% 65%, #ffe6a6 50%, transparent);
+    background-size: 250px 250px;
+    opacity: .6;
+    z-index: -1;
 }
 
 .container {
-    width: 100%;
-    max-width: 520px;
+    max-width: 850px;
     margin: auto;
-    padding: 30px 20px;
-    position: relative;
-    z-index: 2;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.moon {
+    font-size: 55px;
+    margin-bottom: 15px;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffe6a6; }
+    to { text-shadow: 0 0 35px #ffe6a6, 0 0 60px #ffb6c1; }
 }
 
 h1 {
-    font-size: clamp(35px,9vw,55px);
-    color: #ffb6cb;
-    text-shadow: 0 0 20px #ff477e;
-    margin: 20px 0;
-}
-
-p {
-    color: #ffe3ec;
-    font-size: 17px;
-    line-height: 1.8;
-    margin: 15px auto;
-}
-
-.heart {
-    font-size: 65px;
-    animation: beat 1.2s infinite;
-}
-
-@keyframes beat {
-    50% { transform: scale(1.2); }
+    font-size: clamp(35px, 7vw, 60px);
+    color: #ffe6ad;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px #e8a9c8;
 }
 
 .subtitle {
-    color: #ffb6cb;
-    font-size: 15px;
+    font-size: 17px;
+    color: #e9cce6;
+    margin-bottom: 45px;
+    font-style: italic;
+}
+
+.letter {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 224, 170, .3);
+    border-radius: 22px;
+    padding: 30px;
+    line-height: 1.9;
+    font-size: 18px;
+    box-shadow: 0 0 35px rgba(0,0,0,.2);
+    backdrop-filter: blur(8px);
+    text-align: left;
+}
+
+.letter p {
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ffd6a5;
+    font-style: italic;
+}
+
+.gallery-title {
+    margin: 55px 0 22px;
+    color: #ffe6ad;
+    font-size: 30px;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 12px;
-    margin: 30px auto;
-}
-
-.photo {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 17px;
-    border: 2px solid #ff9fba;
-    box-shadow: 0 5px 20px #0005;
-    transition: .3s;
-}
-
-.photo:hover {
-    transform: scale(1.04);
-}
-
-.photo-error {
-    height: 220px;
-    border: 1px dashed #ff9fba;
-    border-radius: 17px;
-    display: grid;
-    place-items: center;
-    color: #ffb6cb;
-    font-size: 14px;
-}
-
-.question-box {
-    margin-top: 35px;
-    padding: 28px 18px;
-    border-radius: 25px;
-    background: #ffffff0d;
-    border: 1px solid #ffb6cb55;
-    box-shadow: 0 0 30px #ff477e22;
-}
-
-.question {
-    color: #ffb6cb;
-    font-size: clamp(25px,6vw,34px);
-    line-height: 1.5;
-    margin: 15px 0 25px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    flex-wrap: wrap;
 }
 
-button {
-    border: none;
-    border-radius: 35px;
-    padding: 15px 32px;
-    font-size: 18px;
-    font-family: Georgia,serif;
-    cursor: pointer;
-    transition: .3s;
+.gallery img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid rgba(255, 226, 174, .55);
+    box-shadow: 0 0 20px rgba(255, 182, 193, .15);
+    transition: transform .3s;
 }
 
-button:hover {
-    transform: scale(1.08);
+.gallery img:hover {
+    transform: scale(1.035);
 }
 
-.yes {
-    background: #ff477e;
-    color: white;
-    box-shadow: 0 0 20px #ff477e88;
+.ending {
+    margin-top: 55px;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #ffe6ad;
 }
 
-.no {
-    background: #ffffff15;
-    color: #ffb6cb;
-    border: 1px solid #ffb6cb88;
-}
-
-.footer {
-    margin-top: 35px;
-    color: #ffb6cb;
-    font-size: 14px;
+.signature {
+    margin-top: 25px;
+    color: #f4c8dc;
+    font-style: italic;
+    font-size: 19px;
 }
 
 .flower {
     position: fixed;
-    bottom: -40px;
+    top: -40px;
     pointer-events: none;
-    z-index: 1;
-    animation: rise 9s linear forwards;
+    animation: fall linear forwards;
+    z-index: 5;
 }
 
-@keyframes rise {
+@keyframes fall {
     to {
-        transform: translateY(-110vh) rotate(360deg);
+        transform: translateY(110vh) rotate(360deg);
         opacity: 0;
     }
 }
 
-@media(max-width:380px) {
-    .photo,.photo-error {
-        height: 175px;
-    }
-
-    button {
-        padding: 14px 25px;
-        font-size: 16px;
-    }
+@media (max-width: 600px) {
+    .container { padding: 35px 15px; }
+    .letter { padding: 22px; font-size: 16px; }
+    .gallery { gap: 9px; }
+    .gallery img { height: 220px; }
+    .subtitle { font-size: 15px; }
 }
 </style>
 </head>
 
 <body>
+<div class="stars"></div>
 
-<div class="container">
+<main class="container">
 
-    <div class="heart">💗</div>
+    <div class="moon">☾</div>
 
-    <p class="subtitle">A little question for someone special...</p>
+    <h1>My Princess Maryam</h1>
 
-    <h1>Hey Maryam 🌷</h1>
-
-    <p>
-        I don't know if it's too soon,
-        but there's something I've wanted to ask you.
+    <p class="subtitle">
+        If the stars could speak, they would tell you what I see in you.
     </p>
 
-    <!-- HER PHOTOS -->
-
-    <div class="gallery">
-
-        <img class="photo" data-image="maryam-1" alt="Maryam">
-        <img class="photo" data-image="maryam-2" alt="Maryam">
-        <img class="photo" data-image="maryam-3" alt="Maryam">
-        <img class="photo" data-image="maryam-4" alt="Maryam">
-
-    </div>
-
-    <div class="question-box">
-
-        <div class="heart">🌷</div>
-
-        <div class="question">
-            Will you be my girlfriend? 🥺❤️
-        </div>
+    <section class="letter">
 
         <p>
-            Just be honest with me.
-            Your answer matters, whatever it is.
+            If someone ever asked me what makes a person beautiful,
+            I wouldn't know where to begin. Because then I'd think of you,
+            and suddenly every ordinary description would feel too small.
         </p>
 
-        <div class="buttons">
+        <p>
+            <span class="highlight">Those beautiful eyes of yours...</span>
+            I wonder what kind of magic they hold. Every time I look at them,
+            the world seems to grow quieter. For a moment, I forget everything
+            around me. It's as if the stars decided to settle in your eyes
+            instead of the sky.
+        </p>
 
-            <button class="yes" onclick="sendAnswer('YES ❤️')">
-                YES! 💗
-            </button>
+        <p>
+            And your smile? Oh, your smile.
+            I don't think you realise how easily it changes my day.
+            Even on the hardest days, the thought of seeing you smile
+            is enough to make my heart feel lighter.
+        </p>
 
-            <button class="no" onclick="sendAnswer('NO 🥺')">
-                NO 🌷
-            </button>
+        <p>
+            But what makes you truly special isn't just your eyes
+            or your smile. It's your heart.
+            The way you ask whether I've eaten, whether I've had enough water,
+            and whether I'm taking care of myself.
+            Little things, perhaps, but to me they mean more than you know.
+        </p>
 
+        <p>
+            I admire the kindness in you. The way you try to understand me,
+            the way you make time for me even when life gets busy,
+            and the way you make ordinary moments feel like something
+            worth remembering.
+        </p>
+
+        <p>
+            If I were a prince in a kingdom full of treasures,
+            I would still consider myself lucky just to know someone like you.
+            Because no crown, palace, or treasure could ever compare
+            to the beauty of a heart as gentle as yours.
+        </p>
+
+        <p>
+            I don't need you to be perfect, Maryam.
+            I just hope you never stop being the wonderful person you are.
+            And if I could give you one thing, it would be the ability
+            to see yourself through my eyes, even for a moment.
+        </p>
+
+        <p class="highlight">
+            Maybe then you'd understand why I find you so magnificent.
+        </p>
+
+    </section>
+
+    <h2 class="gallery-title">A little collection of my favourite view 🌷</h2>
+
+    <section class="gallery">
+        <img data-image="maryam-1" alt="Maryam">
+        <img data-image="maryam-2" alt="Maryam">
+        <img data-image="maryam-3" alt="Maryam">
+        <img data-image="maryam-4" alt="Maryam">
+    </section>
+
+    <div class="ending">
+        Some people look at the stars and make wishes.<br>
+        I look at you and feel like one came true. 🌙
+
+        <div class="signature">
+            With all my admiration,<br>
+            Your biggest admirer ❤️
         </div>
-
     </div>
 
-    <div class="footer">
-        Made with love, just for Maryam ❤️
-        <br><br>
-        🌷 🌸 💗 🌸 🌷
-    </div>
-
-</div>
-
+</main>
 
 <script>
-
-// YOUR WHATSAPP NUMBER
-// Replace with your country code + number.
-// Example for India: 919876543210
-
-const myWhatsApp = "91YOURNUMBER";
-
-
-function sendAnswer(answer) {
-
-    const message =
-        "Hey! I answered your question... 🥺❤️\n\n" +
-        "My answer is: " + answer;
-
-    const whatsappURL =
-        "https://wa.me/" +
-        myWhatsApp +
-        "?text=" +
-        encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-
-}
-
-
-// AUTOMATIC IMAGE FORMAT DETECTION
-
-const extensions = [
-    ".jpeg",
-    ".jpg",
-    ".png",
-    ".webp",
-    ".JPG",
-    ".JPEG",
-    ".PNG"
-];
+// Automatically finds the correct image extension.
+const extensions = [".jpg", ".jpeg", ".png", ".webp", ".JPG", ".JPEG", ".PNG"];
 
 document.querySelectorAll("[data-image]").forEach(img => {
-
     const name = img.dataset.image;
     let index = 0;
 
-    function tryImage() {
-
+    function tryNext() {
         if (index >= extensions.length) {
-
-            const error = document.createElement("div");
-            error.className = "photo-error";
-            error.textContent = "A little memory 🌷";
-
-            img.replaceWith(error);
+            img.alt = "A little memory 🌷";
+            img.style.background = "rgba(255,255,255,.1)";
             return;
         }
 
-        img.src = "./assets/" + name + extensions[index];
-        index++;
-
+        img.src = "./assets/" + name + extensions[index++];
     }
 
-    img.onerror = tryImage;
-    tryImage();
-
+    img.onerror = tryNext;
 });
 
-
-// FLOATING FLOWERS
+// Falling flowers.
+const flowers = ["🌸", "🌷", "💮", "✨", "🌺"];
 
 function createFlower() {
-
     const flower = document.createElement("div");
-
     flower.className = "flower";
-
-    const flowers = ["🌸","🌷","💗","🌺","❤️"];
-
-    flower.textContent =
-        flowers[Math.floor(Math.random() * flowers.length)];
+    flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
 
     flower.style.left = Math.random() * 100 + "vw";
-
-    flower.style.fontSize =
-        (18 + Math.random() * 20) + "px";
+    flower.style.fontSize = (16 + Math.random() * 17) + "px";
+    flower.style.animationDuration = (5 + Math.random() * 6) + "s";
 
     document.body.appendChild(flower);
 
-    setTimeout(() => flower.remove(),9000);
-
+    setTimeout(() => flower.remove(), 11000);
 }
 
-setInterval(createFlower,700);
-
+setInterval(createFlower, 650);
 </script>
 
 </body>
