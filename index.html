@@ -246,12 +246,12 @@ h1 {
         A little collection of my favourite view 🌷
     </h2>
 
-  <section class="gallery">
-    <img src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-1.jpeg">
-    <img src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-2.jpeg">
-    <img src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-3.jpeg">
-    <img src="https://ikbaalkhan910.github.io/for-maryam/assets/maryam-4.jpeg">
-</section>
+    <section class="gallery">
+        <img data-photo="maryam-1" alt="Maryam">
+        <img data-photo="maryam-2" alt="Maryam">
+        <img data-photo="maryam-3" alt="Maryam">
+        <img data-photo="maryam-4" alt="Maryam">
+    </section>
 
     <div class="ending">
 
@@ -268,6 +268,49 @@ h1 {
 </main>
 
 <script>
+
+// AUTOMATIC PHOTO FORMAT DETECTION
+// Tries JPG, JPEG, PNG, WEBP and uppercase extensions.
+
+const formats = [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp",
+    ".JPG",
+    ".JPEG",
+    ".PNG",
+    ".WEBP"
+];
+
+document.querySelectorAll("[data-photo]").forEach(img => {
+
+    const photoName = img.dataset.photo;
+    let formatIndex = 0;
+
+    function loadNextFormat() {
+
+        if (formatIndex >= formats.length) {
+            console.error("Photo not found:", photoName);
+            img.alt = "Photo could not be loaded";
+            return;
+        }
+
+        img.src =
+            "https://ikbaalkhan910.github.io/for-maryam/assets/" +
+            photoName +
+            formats[formatIndex];
+
+        formatIndex++;
+    }
+
+    img.onerror = loadNextFormat;
+
+    loadNextFormat();
+});
+
+
+// FALLING FLOWERS
 const flowers = ["🌸", "🌷", "💮", "✨", "🌺"];
 
 function createFlower() {
@@ -290,6 +333,7 @@ function createFlower() {
 }
 
 setInterval(createFlower, 650);
+
 </script>
 
 </body>
