@@ -7,180 +7,164 @@
 <title>My Little Babyyy😋😋 🌙</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-    min-height: 100vh;
-    font-family: Georgia, serif;
-    color: #fff5e6;
+    min-height:100vh;
+    font-family:Georgia,serif;
+    color:#fff5e6;
     background:
-        radial-gradient(circle at top, #65417d 0%, transparent 40%),
-        linear-gradient(145deg, #100d2b, #28153f, #4b2148);
-    overflow-x: hidden;
+        radial-gradient(circle at top,#65417d 0%,transparent 40%),
+        linear-gradient(145deg,#100d2b,#28153f,#4b2148);
+    overflow-x:hidden;
 }
 
 .stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
+    position:fixed;
+    inset:0;
+    pointer-events:none;
     background-image:
-        radial-gradient(2px 2px at 20% 30%, white 50%, transparent),
-        radial-gradient(2px 2px at 70% 20%, #ffe6a6 50%, transparent),
-        radial-gradient(2px 2px at 40% 80%, white 50%, transparent),
-        radial-gradient(2px 2px at 85% 65%, #ffe6a6 50%, transparent);
-    background-size: 250px 250px;
-    opacity: .6;
-    z-index: 0;
+        radial-gradient(2px 2px at 20% 30%,white 50%,transparent),
+        radial-gradient(2px 2px at 70% 20%,#ffe6a6 50%,transparent),
+        radial-gradient(2px 2px at 40% 80%,white 50%,transparent),
+        radial-gradient(2px 2px at 85% 65%,#ffe6a6 50%,transparent);
+    background-size:250px 250px;
+    opacity:.6;
+    z-index:0;
 }
 
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 850px;
-    margin: auto;
-    padding: 55px 20px;
-    text-align: center;
+    position:relative;
+    z-index:1;
+    max-width:850px;
+    margin:auto;
+    padding:55px 20px;
+    text-align:center;
 }
 
 .moon {
-    font-size: 55px;
-    margin-bottom: 15px;
-    animation: glow 3s infinite alternate;
+    font-size:55px;
+    margin-bottom:15px;
+    animation:glow 3s infinite alternate;
 }
 
 @keyframes glow {
-    from { text-shadow: 0 0 10px #ffe6a6; }
-    to {
-        text-shadow: 0 0 35px #ffe6a6,
-                     0 0 60px #ffb6c1;
-    }
+    from { text-shadow:0 0 10px #ffe6a6; }
+    to { text-shadow:0 0 35px #ffe6a6,0 0 60px #ffb6c1; }
 }
 
 h1 {
-    font-size: clamp(35px, 7vw, 60px);
-    color: #ffe6ad;
-    margin-bottom: 15px;
-    text-shadow: 0 0 20px #e8a9c8;
+    font-size:clamp(35px,7vw,60px);
+    color:#ffe6ad;
+    margin-bottom:15px;
+    text-shadow:0 0 20px #e8a9c8;
 }
 
 .subtitle {
-    font-size: 17px;
-    color: #e9cce6;
-    margin-bottom: 45px;
-    font-style: italic;
+    font-size:17px;
+    color:#e9cce6;
+    margin-bottom:45px;
+    font-style:italic;
 }
 
 .letter {
-    background: rgba(255, 255, 255, .08);
-    border: 1px solid rgba(255, 224, 170, .3);
-    border-radius: 22px;
-    padding: 30px;
-    line-height: 1.9;
-    font-size: 18px;
-    box-shadow: 0 0 35px rgba(0,0,0,.2);
-    backdrop-filter: blur(8px);
-    text-align: left;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,224,170,.3);
+    border-radius:22px;
+    padding:30px;
+    line-height:1.9;
+    font-size:18px;
+    box-shadow:0 0 35px rgba(0,0,0,.2);
+    backdrop-filter:blur(8px);
+    text-align:left;
 }
 
-.letter p {
-    margin-bottom: 20px;
-}
+.letter p { margin-bottom:20px; }
 
 .highlight {
-    color: #ffd6a5;
-    font-style: italic;
+    color:#ffd6a5;
+    font-style:italic;
 }
 
 .gallery-title {
-    margin: 55px 0 25px;
-    color: #ffe6ad;
-    font-size: 30px;
+    margin:55px 0 25px;
+    color:#ffe6ad;
+    font-size:30px;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.photo-link {
+    display:block;
+    border-radius:18px;
+    overflow:hidden;
 }
 
 .gallery img {
-    display: block;
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 18px;
-    border: 2px solid rgba(255, 226, 174, .65);
-    box-shadow: 0 0 25px rgba(255, 182, 193, .2);
-    transition: transform .3s, box-shadow .3s;
+    display:block;
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:18px;
+    border:2px solid rgba(255,226,174,.65);
+    box-shadow:0 0 25px rgba(255,182,193,.2);
+    transition:transform .3s,box-shadow .3s;
 }
 
-.gallery img:hover {
-    transform: scale(1.035);
-    box-shadow: 0 0 30px rgba(255, 182, 193, .5);
+.photo-link:hover img {
+    transform:scale(1.035);
+    box-shadow:0 0 30px rgba(255,182,193,.5);
+}
+
+.photo-caption {
+    display:block;
+    padding:10px;
+    color:#ffe6ad;
+    font-size:14px;
+    font-style:italic;
 }
 
 .ending {
-    margin-top: 55px;
-    font-size: 22px;
-    line-height: 1.8;
-    color: #ffe6ad;
+    margin-top:55px;
+    font-size:22px;
+    line-height:1.8;
+    color:#ffe6ad;
 }
 
 .signature {
-    margin-top: 25px;
-    color: #f4c8dc;
-    font-style: italic;
-    font-size: 19px;
+    margin-top:25px;
+    color:#f4c8dc;
+    font-style:italic;
+    font-size:19px;
 }
 
 .flower {
-    position: fixed;
-    top: -40px;
-    pointer-events: none;
-    animation: fall linear forwards;
-    z-index: 5;
+    position:fixed;
+    top:-40px;
+    pointer-events:none;
+    animation:fall linear forwards;
+    z-index:5;
 }
 
 @keyframes fall {
     to {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
     }
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding: 35px 15px;
-    }
-
-    .letter {
-        padding: 22px;
-        font-size: 16px;
-    }
-
-    .gallery {
-        gap: 10px;
-    }
-
-    .gallery img {
-        height: 230px;
-    }
-
-    .subtitle {
-        font-size: 15px;
-    }
-
-    .gallery-title {
-        font-size: 25px;
-    }
-
-    .ending {
-        font-size: 19px;
-    }
+@media(max-width:600px) {
+    .container { padding:35px 15px; }
+    .letter { padding:22px; font-size:16px; }
+    .gallery { gap:10px; }
+    .gallery img { height:230px; }
+    .subtitle { font-size:15px; }
+    .gallery-title { font-size:25px; }
+    .ending { font-size:19px; }
 }
 </style>
 </head>
@@ -191,149 +175,143 @@ h1 {
 
 <main class="container">
 
-    <div class="moon">☾</div>
+<div class="moon">☾</div>
 
-    <h1>Wifeyyy 😋😋</h1>
+<h1>Wifeyyy 😋😋</h1>
 
-    <p class="subtitle">
-         Idk If youd like this...but i just wanted to clarify
-    </p>
+<p class="subtitle">
+Idk If youd like this...but i just wanted to clarify
+</p>
 
-    <section class="letter">
+<section class="letter">
 
-        <p>
-     its not like i wanna use you or timepass i just wanna held u close to me ik i can be rude sometimes but its just that ive never felt this love dw...ill change for us...for our better future for ours kid 😋😋 inshallah
-        </p>
+<p>
+its not like i wanna use you or timepass i just wanna held u close to me ik i can be rude sometimes but its just that ive never felt this love dw...ill change for us...for our better future for ours kid 😋😋 inshallah
+</p>
 
-        <p>
-            <span class="highlight">Those beautiful eyes of yours...</span>
-           everytime u sleep or are doin somethin or even typing msg i just look at ur eyes...i wonder how they look in real like...whenever
-            i look at themm..i forget all my worries what i was scared of everything..those eyes make me feel like...there is someone who would still cheer for me..when everyone is against me
-        </p>
+<p>
+<span class="highlight">Those beautiful eyes of yours...</span>
+everytime u sleep or are doin somethin or even typing msg i just look at ur eyes...i wonder how they look in real like...whenever
+i look at themm..i forget all my worries what i was scared of everything..those eyes make me feel like...there is someone who would still cheer for me..when everyone is against me
+</p>
 
-        <p>
-          Your smile? is just my favourite....like "you smile i fall harder for you maryam.." you think ur smile is ugly? its the thing which i adoree the mostt like most
-            always like evertime u smile at me it feels special everytime i see it i dont get bored of it...if possible i wanna see u smile alwayss like everydayy
-        </p>
+<p>
+Your smile? is just my favourite....like "you smile i fall harder for you maryam.." you think ur smile is ugly? its the thing which i adoree the mostt like most
+always like evertime u smile at me it feels special everytime i see it i dont get bored of it...if possible i wanna see u smile alwayss like everydayy
+</p>
 
-        <p>
-          But sometimes im cold and distant is bc im a monster my parents always hated me...i do love you alot more than anythin like words cant even explain that...every mornin i see if ur still on call...i see ur text and smile bc the way 
-            you explain that im goin to eat and etc of ur mmsgs i lovee it
-        </p>
+<p>
+But sometimes im cold and distant is bc im a monster my parents always hated me...i do love you alot more than anythin like words cant even explain that...every mornin i see if ur still on call...i see ur text and smile bc the way
+you explain that im goin to eat and etc of ur mmsgs i lovee it
+</p>
 
-        <p>
-       and the real reason i fell for u is rather weird...that day when we first talked...i begged god to either kill me ot give me someone who i can rely on...someone who can love the real me..i cried alot that day..
-            after that came to roblox played w u you were bad at that game but still...i laughed idk why i found it funny...i smiled which i thought i lost was there...that moment ik...ur the one maryam
-        </p>
+<p>
+and the real reason i fell for u is rather weird...that day when we first talked...i begged god to either kill me ot give me someone who i can rely on...someone who can love the real me..i cried alot that day..
+after that came to roblox played w u you were bad at that game but still...i laughed idk why i found it funny...i smiled which i thought i lost was there...that moment ik...ur the one maryam
+</p>
 
-        <p>
-          ik u see me as friend its fine..i mean they say right karma and etc ik but why the sin of my parents is given to me i never understood...whenever ur sad...i get this anger to ruin everythin which
-            made my little baby cry...i always wanted to ur little boy..
-        </p>
+<p>
+ik u see me as friend its fine..i mean they say right karma and etc ik but why the sin of my parents is given to me i never understood...whenever ur sad...i get this anger to ruin everythin which
+made my little baby cry...i always wanted to ur little boy..
+</p>
 
-        <p>
-            ik u can never love me...yet i crave foor that love..im bad ik...i wish u loved me...really..sincerely...but ig its fine...my heart drops everytime u go far from me..when we fight i just wanna hug u and say 
-            no can't we just say sorry..? and forget fight?...i dont wanna fight w u....ur someone i lovee the most in this shitty world...ur someone who showed me...what its to mean bein loved...
-        </p>
+<p>
+ik u can never love me...yet i crave foor that love..im bad ik...i wish u loved me...really..sincerely...but ig its fine...my heart drops everytime u go far from me..when we fight i just wanna hug u and say
+no can't we just say sorry..? and forget fight?...i dont wanna fight w u....ur someone i lovee the most in this shitty world...ur someone who showed me...what its to mean bein loved...
+</p>
 
-        <p class="highlight">
-         And Lastly...Maryam I Can Never Move On from you...the reason is simple...for this lifetime and eternity..."I Am Yours....🤍🤍 ~ Tauqeer"
-        </p>
+<p class="highlight">
+And Lastly...Maryam I Can Never Move On from you...the reason is simple...for this lifetime and eternity..."I Am Yours....🤍🤍 ~ Tauqeer"
+</p>
 
-    </section>
+</section>
 
-    <h2 class="gallery-title">
-        A little collection of my favourite view 🌷
-    </h2>
+<h2 class="gallery-title">
+A little collection of my favourite view 🌷
+</h2>
 
-    <section class="gallery">
-        <img data-photo="maryam-1" alt="Maryam">
-        <img data-photo="maryam-2" alt="Maryam">
-        <img data-photo="maryam-3" alt="Maryam">
-        <img data-photo="maryam-4" alt="Maryam">
-    </section>
+<section class="gallery">
 
-    <div class="ending">
+<a class="photo-link" href="secret.html?secret=1">
+<img data-photo="maryam-1" alt="Maryam">
+<span class="photo-caption">A little secret 🌸</span>
+</a>
 
-       Whenever my days go bad...i look and kiss your photo...<br>
-      And Just Stare at it...With Love...I could never hate you...nor see you...w lust..
+<a class="photo-link" href="secret.html?secret=2">
+<img data-photo="maryam-2" alt="Maryam">
+<span class="photo-caption">Something special 💍</span>
+</a>
 
-        <div class="signature">
-            The Love Which I Never Got..,<br>
-            The One Who Loves You..Cherishes You Alot
-        </div>
+<a class="photo-link" href="secret.html?secret=3">
+<img data-photo="maryam-3" alt="Maryam">
+<span class="photo-caption">What I adore about you 💗</span>
+</a>
 
-    </div>
+<a class="photo-link" href="secret.html?secret=4">
+<img data-photo="maryam-4" alt="Maryam">
+<span class="photo-caption">Why you? 🌙</span>
+</a>
+
+</section>
+
+<div class="ending">
+
+Whenever my days go bad...i look and kiss your photo...<br>
+And Just Stare at it...With Love...I could never hate you...nor see you...w lust..
+
+<div class="signature">
+The Love Which I Never Got..,<br>
+The One Who Loves You..Cherishes You Alot
+</div>
+
+</div>
 
 </main>
 
 <script>
-
-// AUTOMATIC PHOTO FORMAT DETECTION
-// Tries JPG, JPEG, PNG, WEBP and uppercase extensions.
-
 const formats = [
-    ".jpg",
-    ".jpeg",
-    ".png",
-    ".webp",
-    ".JPG",
-    ".JPEG",
-    ".PNG",
-    ".WEBP"
+".jpg",".jpeg",".png",".webp",
+".JPG",".JPEG",".PNG",".WEBP"
 ];
 
 document.querySelectorAll("[data-photo]").forEach(img => {
-
     const photoName = img.dataset.photo;
     let formatIndex = 0;
 
     function loadNextFormat() {
-
         if (formatIndex >= formats.length) {
-            console.error("Photo not found:", photoName);
-            img.alt = "Photo could not be loaded";
+            img.alt = "Photo unavailable";
             return;
         }
 
         img.src =
-            "https://ikbaalkhan910.github.io/for-maryam/assets/" +
-            photoName +
-            formats[formatIndex];
+        "https://ikbaalkhan910.github.io/for-maryam/assets/" +
+        photoName + formats[formatIndex];
 
         formatIndex++;
     }
 
     img.onerror = loadNextFormat;
-
     loadNextFormat();
 });
 
-
-// FALLING FLOWERS
-const flowers = ["🌸", "🌷", "💮", "✨", "🌺"];
+const flowers = ["🌸","🌷","💮","✨","🌺"];
 
 function createFlower() {
     const flower = document.createElement("div");
-
     flower.className = "flower";
     flower.textContent =
-        flowers[Math.floor(Math.random() * flowers.length)];
+        flowers[Math.floor(Math.random()*flowers.length)];
 
-    flower.style.left = Math.random() * 100 + "vw";
-    flower.style.fontSize =
-        (16 + Math.random() * 17) + "px";
-
-    flower.style.animationDuration =
-        (5 + Math.random() * 6) + "s";
+    flower.style.left = Math.random()*100+"vw";
+    flower.style.fontSize = (16+Math.random()*17)+"px";
+    flower.style.animationDuration = (5+Math.random()*6)+"s";
 
     document.body.appendChild(flower);
-
-    setTimeout(() => flower.remove(), 11000);
+    setTimeout(() => flower.remove(),11000);
 }
 
-setInterval(createFlower, 650);
-
+setInterval(createFlower,650);
 </script>
 
 </body>
