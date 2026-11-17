@@ -4,351 +4,492 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Little Babyyy😋😋 🌙</title>
+<title>For My Maryam ♡</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+* {margin:0;padding:0;box-sizing:border-box}
 
 body {
-    min-height: 100vh;
-    font-family: Georgia, serif;
-    color: #fff5e6;
-    background:
-        radial-gradient(circle at top, #65417d 0%, transparent 40%),
-        linear-gradient(145deg, #100d2b, #28153f, #4b2148);
-    overflow-x: hidden;
+  background:linear-gradient(135deg,#fff0f5,#ffe0eb,#fff5fa);
+  color:#87445f;
+  font-family:'Quicksand',sans-serif;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
 }
 
-.stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background-image:
-        radial-gradient(2px 2px at 20% 30%, white 50%, transparent),
-        radial-gradient(2px 2px at 70% 20%, #ffe6a6 50%, transparent),
-        radial-gradient(2px 2px at 40% 80%, white 50%, transparent),
-        radial-gradient(2px 2px at 85% 65%, #ffe6a6 50%, transparent);
-    background-size: 250px 250px;
-    opacity: .6;
-    z-index: 0;
+#hearts {
+  position:fixed;inset:0;
+  pointer-events:none;z-index:0;
+  overflow:hidden;
+}
+
+.heart {
+  position:absolute;bottom:-50px;
+  animation:floatUp linear forwards;
+  opacity:.7;
+}
+
+@keyframes floatUp {
+  to {transform:translateY(-115vh) rotate(360deg);opacity:0}
 }
 
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 850px;
-    margin: auto;
-    padding: 55px 20px;
-    text-align: center;
+  position:relative;z-index:1;
+  width:min(850px,92%);
+  margin:auto;
 }
 
-.moon {
-    font-size: 55px;
-    margin-bottom: 15px;
-    animation: glow 3s infinite alternate;
+.hero {
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;padding:30px 10px;
 }
 
-@keyframes glow {
-    from { text-shadow: 0 0 10px #ffe6a6; }
-    to {
-        text-shadow: 0 0 35px #ffe6a6,
-                     0 0 60px #ffb6c1;
-    }
+.tag {
+  background:#ffffffa8;
+  padding:10px 22px;border-radius:50px;
+  font-size:12px;letter-spacing:3px;
+  margin-bottom:25px;
 }
 
 h1 {
-    font-size: clamp(35px, 7vw, 60px);
-    color: #ffe6ad;
-    margin-bottom: 15px;
-    text-shadow: 0 0 20px #e8a9c8;
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(65px,12vw,110px);
+  color:#d45c87;
+  text-shadow:0 5px 20px #e99dbb66;
+  animation:appear 2s ease;
 }
 
-.subtitle {
-    font-size: 17px;
-    color: #e9cce6;
-    margin-bottom: 45px;
-    font-style: italic;
+.subtitle {font-size:15px;margin-top:10px;line-height:2}
+
+.pulse {
+  font-size:45px;margin-top:30px;
+  animation:pulse 1.4s infinite;
 }
 
-.letter {
-    background: rgba(255, 255, 255, .08);
-    border: 1px solid rgba(255, 224, 170, .3);
-    border-radius: 22px;
-    padding: 30px;
-    line-height: 1.9;
-    font-size: 18px;
-    box-shadow: 0 0 35px rgba(0,0,0,.2);
-    backdrop-filter: blur(8px);
-    text-align: left;
+@keyframes pulse {
+  50% {transform:scale(1.25)}
 }
 
-.letter p {
-    margin-bottom: 20px;
+@keyframes appear {
+  from {opacity:0;transform:translateY(30px)}
+  to {opacity:1;transform:translateY(0)}
 }
 
-.highlight {
-    color: #ffd6a5;
-    font-style: italic;
+section {
+  margin:35px auto;
+  padding:35px 27px;
+  border:1px solid #ffffff;
+  border-radius:27px;
+  background:#ffffffa8;
+  box-shadow:0 12px 40px #d47a9a18;
+  backdrop-filter:blur(12px);
+  text-align:center;
 }
 
-.gallery-title {
-    margin: 55px 0 25px;
-    color: #ffe6ad;
-    font-size: 30px;
+h2 {
+  font-family:'Great Vibes',cursive;
+  font-size:48px;color:#d45c87;
+  margin-bottom:20px;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+p {
+  font-size:15px;line-height:2.1;
+  margin:12px 0;
 }
 
-.photo-link {
-    display: block;
-    text-decoration: none;
-    border-radius: 18px;
-    overflow: hidden;
+.divider {
+  color:#e58bab;
+  font-size:25px;margin:25px;
 }
 
-.gallery img {
-    display: block;
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 18px;
-    border: 2px solid rgba(255, 226, 174, .65);
-    box-shadow: 0 0 25px rgba(255, 182, 193, .2);
-    transition: transform .3s, box-shadow .3s;
+button {
+  border:0;border-radius:40px;
+  background:linear-gradient(135deg,#f18bb0,#d75c89);
+  color:white;padding:15px 26px;
+  font-family:inherit;font-weight:700;
+  font-size:14px;cursor:pointer;
+  box-shadow:0 7px 20px #d75c8940;
+  transition:.3s;
+  margin:10px;
 }
 
-.photo-link:hover img {
-    transform: scale(1.035);
-    box-shadow: 0 0 30px rgba(255, 182, 193, .5);
+button:hover {transform:translateY(-4px) scale(1.04)}
+
+.hidden-message {
+  display:none;
+  padding:20px;
+  background:#fff0f5;
+  border-radius:20px;
+  margin-top:20px;
+  line-height:2;
+  animation:appear .8s;
 }
 
-.ending {
-    margin-top: 55px;
-    font-size: 22px;
-    line-height: 1.8;
-    color: #ffe6ad;
+.reveal {
+  opacity:0;
+  transform:translateY(35px);
+  transition:all 1s ease;
 }
 
-.signature {
-    margin-top: 25px;
-    color: #f4c8dc;
-    font-style: italic;
-    font-size: 19px;
+.reveal.show {
+  opacity:1;
+  transform:translateY(0);
 }
 
-.flower {
-    position: fixed;
-    top: -40px;
-    pointer-events: none;
-    animation: fall linear forwards;
-    z-index: 5;
+.promise {
+  background:#fff4f8;
+  border-radius:18px;
+  padding:17px;
+  margin:12px 0;
+  text-align:left;
+  transition:.3s;
 }
 
-@keyframes fall {
-    to {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-    }
+.promise:hover {transform:translateX(7px)}
+
+.promise span {color:#d45c87;font-weight:700}
+
+footer {
+  text-align:center;padding:65px 15px;
+  line-height:2;
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding: 35px 15px;
-    }
+footer h2 {font-size:65px}
 
-    .letter {
-        padding: 22px;
-        font-size: 16px;
-    }
-
-    .gallery {
-        gap: 10px;
-    }
-
-    .gallery img {
-        height: 230px;
-    }
-
-    .subtitle {
-        font-size: 15px;
-    }
-
-    .gallery-title {
-        font-size: 25px;
-    }
-
-    .ending {
-        font-size: 19px;
-    }
+#finalLetter {
+  display:none;
+  animation:appear 1s;
 }
+
+.small {font-size:12px;opacity:.7}
+
 </style>
 </head>
 
 <body>
 
-<div class="stars"></div>
+<div id="hearts"></div>
 
-<main class="container">
+<div class="container">
 
-    <div class="moon">☾</div>
+<header class="hero">
+  <div class="tag">A LITTLE UNIVERSE MADE FOR YOU ♡</div>
 
-    <h1>Wifeyyy 😋😋</h1>
+  <h1>My Maryam</h1>
 
-    <p class="subtitle">
-         Idk If youd like this...but i just wanted to clarify
+  <p class="subtitle">
+    If your heart ever forgets how loved it is,<br>
+    I hope this little place reminds you. 🎀
+  </p>
+
+  <div class="pulse">💗</div>
+
+  <p>Made with all the love I have for you.</p>
+
+  <button onclick="document.getElementById('begin').scrollIntoView({behavior:'smooth'})">
+    Open your little surprise ♡
+  </button>
+</header>
+
+<section id="begin" class="reveal">
+  <h2>First, my love...</h2>
+
+  <p>
+    I know sometimes your mind makes you question things.
+    I know there are moments when trusting someone's love
+    doesn't feel easy. Maybe there are days when you wonder
+    whether I really mean the things I say.
+  </p>
+
+  <p>
+    But sweetheart, I don't want you to feel like you have
+    to fight those thoughts alone. I don't expect you to
+    suddenly forget everything that hurt you.
+  </p>
+
+  <p>
+    I want to understand you. I want to learn what makes
+    you feel safe, what makes you smile, and what makes
+    your heart feel a little lighter.
+  </p>
+
+  <div class="divider">୨୧</div>
+
+  <p><b>You don't have to earn my affection by being perfect.</b></p>
+</section>
+
+<section class="reveal">
+  <h2>Do you know something?</h2>
+
+  <p>
+    I don't love you only when you're happy.
+    I don't love you only when you're smiling,
+    when you're energetic, or when everything
+    between us feels perfect.
+  </p>
+
+  <p>
+    I love the girl who gets tired.
+    The girl who overthinks.
+    The girl who sometimes struggles to believe
+    she's enough.
+    The girl who needs reassurance sometimes.
+  </p>
+
+  <p>
+    I don't need you to pretend you're okay just
+    to make things easier for me.
+    Your feelings deserve patience too.
+  </p>
+
+  <div class="divider">♡ ♡ ♡</div>
+
+  <p>
+    And please, never think that having difficult
+    days makes you harder to love.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Things I want you to remember</h2>
+
+  <div class="promise">🌷 <span>You are enough.</span><br>You don't need to change yourself to deserve love.</div>
+
+  <div class="promise">🧸 <span>Your feelings matter.</span><br>I want to listen, even when it's difficult to explain.</div>
+
+  <div class="promise">💗 <span>You can take your time.</span><br>You don't have to heal on anyone else's schedule.</div>
+
+  <div class="promise">🌙 <span>You can communicate.</span><br>You can tell me when something hurts or when you need reassurance.</div>
+
+  <div class="promise">🎀 <span>You are appreciated.</span><br>Even the smallest things you do mean something to me.</div>
+
+  <div class="promise">💌 <span>I choose honesty.</span><br>I want my actions to match the love I tell you about.</div>
+</section>
+
+<section class="reveal">
+  <h2>Let me tell you why it's you...</h2>
+
+  <p>
+    It's your kindness. It's the way you try to understand me.
+    It's how you ask whether I've eaten or had enough water.
+    It's the way you make ordinary conversations feel special.
+  </p>
+
+  <p>
+    It's your eyes, the ones I could look at and forget
+    everything else for a little while.
+    It's your voice, your presence, your little habits,
+    and all the tiny things you probably don't even notice.
+  </p>
+
+  <p>
+    I appreciate the girl behind the screen.
+    Not some imaginary perfect version of you.
+    YOU. The real you.
+  </p>
+
+  <p>
+    I don't want a perfect love story.
+    I want something genuine, something patient,
+    something where we can both be ourselves.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>A little reminder, sweetheart</h2>
+
+  <p>
+    Whenever your thoughts get too loud,
+    whenever you feel like I don't love you,
+    whenever the past makes the present feel scary...
+  </p>
+
+  <p>
+    Please talk to me.
+    You don't have to hide your fears.
+    You don't have to apologize for needing comfort.
+  </p>
+
+  <p>
+    I cannot promise that I'll always know the perfect
+    words, but I can promise to listen, to be honest,
+    and to keep trying to understand you.
+  </p>
+
+  <button onclick="show('comfort')">When I doubt your love 🥺</button>
+
+  <div class="hidden-message" id="comfort">
+    My darling, breathe for a moment. You don't have
+    to figure everything out right now. One difficult
+    thought doesn't define our relationship. One
+    difficult day doesn't erase the care between us.
+    You deserve patience, gentleness and reassurance.
+    I'm here because I want to be here. ♡
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Our tiny collection of moments</h2>
+
+  <p>Every little conversation becomes a memory.</p>
+
+  <button onclick="show('one')">A random thought 💭</button>
+  <button onclick="show('two')">Something I adore 🌷</button>
+  <button onclick="show('three')">A little wish 🌙</button>
+
+  <div id="one" class="hidden-message">
+    I hope you never underestimate how much happiness
+    your existence can bring into an ordinary day.
+  </div>
+
+  <div id="two" class="hidden-message">
+    I adore how you care. How you try. How you make
+    space for me even when you have your own things going on.
+  </div>
+
+  <div id="three" class="hidden-message">
+    I wish for a future where we can sit beside each other,
+    talk for hours, laugh over silly things and make
+    memories without a screen between us.
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>My little promises ♡</h2>
+
+  <p>
+    I promise to try to understand instead of assuming.
+    To communicate instead of disappearing.
+    To respect your boundaries.
+    To appreciate your efforts.
+    To never use your vulnerability against you.
+  </p>
+
+  <p>
+    I promise to remember that love isn't just saying
+    beautiful things. It's showing up, being consistent,
+    respecting each other and making each other feel valued.
+  </p>
+
+  <p>
+    And when we misunderstand each other,
+    I want us to remember that we're on the same team.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>One last thing...</h2>
+
+  <p>
+    If I could give you one thing, it would be the ability
+    to see yourself through the eyes of someone who
+    genuinely appreciates you.
+  </p>
+
+  <p>
+    Maybe then you'd understand how precious your
+    kindness is, how beautiful your little habits are,
+    and how much you deserve a love that doesn't
+    make you question your worth.
+  </p>
+
+  <button onclick="showLetter()">Open your final letter 💌</button>
+
+  <div id="finalLetter" class="hidden-message">
+    <h2>My dearest Maryam</h2>
+
+    <p>
+      I don't know how many times I'll have to remind you,
+      and I don't mind reminding you again and again.
+      I care about you. I appreciate you. I want to love
+      you in ways that you can actually feel, not just
+      hear through a screen.
     </p>
 
-    <section class="letter">
+    <p>
+      I know I can't erase your past, and I won't ask you
+      to pretend it never happened. I only hope that,
+      with time, I can become someone whose actions
+      make you feel safe rather than someone whose words
+      you feel forced to believe.
+    </p>
 
-        <p>
-     its not like i wanna use you or timepass i just wanna held u close to me ik i can be rude sometimes but its just that ive never felt this love dw...ill change for us...for our better future for ours kid 😋😋 inshallah
-        </p>
+    <p>
+      You don't have to be okay every second.
+      You don't have to hide your worries.
+      You don't have to be afraid of telling me
+      what your heart needs.
+    </p>
 
-        <p>
-            <span class="highlight">Those beautiful eyes of yours...</span>
-           everytime u sleep or are doin somethin or even typing msg i just look at ur eyes...i wonder how they look in real like...whenever
-            i look at themm..i forget all my worries what i was scared of everything..those eyes make me feel like...there is someone who would still cheer for me..when everyone is against me
-        </p>
+    <p>
+      Thank you for being Maryam.
+      Thank you for the smiles, the conversations,
+      the little reminders, and every moment you've
+      shared with me.
+    </p>
 
-        <p>
-          Your smile? is just my favourite....like "you smile i fall harder for you maryam.." you think ur smile is ugly? its the thing which i adoree the mostt like most
-            always like evertime u smile at me it feels special everytime i see it i dont get bored of it...if possible i wanna see u smile alwayss like everydayy
-        </p>
+    <p>
+      If I had to write this all over again,
+      I'd still write it for you.
+    </p>
 
-        <p>
-          But sometimes im cold and distant is bc im a monster my parents always hated me...i do love you alot more than anythin like words cant even explain that...every mornin i see if ur still on call...i see ur text and smile bc the way 
-            you explain that im goin to eat and etc of ur mmsgs i lovee it
-        </p>
+    <h2>With all my love, always. ♡</h2>
+    <div style="font-size:40px">💗🌷🧸</div>
+  </div>
+</section>
 
-        <p>
-       and the real reason i fell for u is rather weird...that day when we first talked...i begged god to either kill me ot give me someone who i can rely on...someone who can love the real me..i cried alot that day..
-            after that came to roblox played w u you were bad at that game but still...i laughed idk why i found it funny...i smiled which i thought i lost was there...that moment ik...ur the one maryam
-        </p>
+<footer>
+  <h2>For Maryam ♡</h2>
+  <p>One girl. A thousand little reasons to smile.</p>
+  <p class="small">Made with love, just for you. 🎀</p>
+</footer>
 
-        <p>
-          ik u see me as friend its fine..i mean they say right karma and etc ik but why the sin of my parents is given to me i never understood...whenever ur sad...i get this anger to ruin everythin which
-            made my little baby cry...i always wanted to ur little boy..
-        </p>
-
-        <p>
-            ik u can never love me...yet i crave foor that love..im bad ik...i wish u loved me...really..sincerely...but ig its fine...my heart drops everytime u go far from me..when we fight i just wanna hug u and say 
-            no can't we just say sorry..? and forget fight?...i dont wanna fight w u....ur someone i lovee the most in this shitty world...ur someone who showed me...what its to mean bein loved...
-        </p>
-
-        <p class="highlight">
-         And Lastly...Maryam I Can Never Move On from you...the reason is simple...for this lifetime and eternity..."I Am Yours....🤍🤍 ~ Tauqeer"
-        </p>
-
-    </section>
-
-    <h2 class="gallery-title">
-        A little collection of my favourite view 🌷
-    </h2>
-
-    <section class="gallery">
-
-        <a class="photo-link" href="./secret.html?secret=1">
-            <img data-photo="maryam-1" alt="Maryam">
-        </a>
-
-        <a class="photo-link" href="./secret.html?secret=2">
-            <img data-photo="maryam-2" alt="Maryam">
-        </a>
-
-        <a class="photo-link" href="./secret.html?secret=3">
-            <img data-photo="maryam-3" alt="Maryam">
-        </a>
-
-        <a class="photo-link" href="./secret.html?secret=4">
-            <img data-photo="maryam-4" alt="Maryam">
-        </a>
-
-    </section>
-
-    <div class="ending">
-
-       Whenever my days go bad...i look and kiss your photo...<br>
-      And Just Stare at it...With Love...I could never hate you...nor see you...w lust..
-
-        <div class="signature">
-            The Love Which I Never Got..,<br>
-            The One Who Loves You..Cherishes You Alot
-        </div>
-
-    </div>
-
-</main>
+</div>
 
 <script>
+// Floating hearts
+const heartContainer = document.getElementById('hearts');
 
-// AUTOMATIC PHOTO FORMAT DETECTION
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerHTML = ['♡','💗','💕','🌸','✧'][Math.floor(Math.random()*5)];
+  heart.style.left = Math.random()*100+'%';
+  heart.style.fontSize = (12+Math.random()*22)+'px';
+  heart.style.animationDuration = (6+Math.random()*7)+'s';
+  heartContainer.appendChild(heart);
+  setTimeout(()=>heart.remove(),14000);
+}
+setInterval(createHeart,450);
 
-const formats = [
-    ".jpg", ".jpeg", ".png", ".webp",
-    ".JPG", ".JPEG", ".PNG", ".WEBP"
-];
-
-document.querySelectorAll("[data-photo]").forEach(img => {
-
-    const photoName = img.dataset.photo;
-    let formatIndex = 0;
-
-    function loadNextFormat() {
-
-        if (formatIndex >= formats.length) {
-            console.error("Photo not found:", photoName);
-            img.alt = "Photo unavailable";
-            return;
-        }
-
-        img.src =
-            "https://ikbaalkhan910.github.io/for-maryam/assets/" +
-            photoName + formats[formatIndex];
-
-        formatIndex++;
+// Scroll animations
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
     }
+  });
+},{threshold:0.12});
 
-    img.onerror = loadNextFormat;
-    loadNextFormat();
-});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-
-// FALLING FLOWERS
-
-const flowers = ["🌸", "🌷", "💮", "✨", "🌺"];
-
-function createFlower() {
-
-    const flower = document.createElement("div");
-
-    flower.className = "flower";
-
-    flower.textContent =
-        flowers[Math.floor(Math.random() * flowers.length)];
-
-    flower.style.left = Math.random() * 100 + "vw";
-
-    flower.style.fontSize =
-        (16 + Math.random() * 17) + "px";
-
-    flower.style.animationDuration =
-        (5 + Math.random() * 6) + "s";
-
-    document.body.appendChild(flower);
-
-    setTimeout(() => flower.remove(), 11000);
+// Surprise messages
+function show(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
 }
 
-setInterval(createFlower, 650);
-
+// Final letter
+function showLetter() {
+  const letter = document.getElementById('finalLetter');
+  letter.style.display='block';
+  letter.scrollIntoView({behavior:'smooth',block:'center'});
+  for(let i=0;i<30;i++) setTimeout(createHeart,i*80);
+}
 </script>
 
 </body>
